@@ -35,6 +35,37 @@ RSpec.describe Calculator do
             c.addition.should == "For Calculation only numbers are allowed"
         end
 
+        it "a nil and 10 should return For Calculation only numbers are allowed" do
+            c =  described_class.new(nil,10) 
+            c.addition.should == "For Calculation only numbers are allowed"
+        end
+
+        it "a "" and 10 should return For Calculation only numbers are allowed" do
+            c =  described_class.new(10,nil) 
+            c.addition.should == "For Calculation only numbers are allowed"
+        end
+
+        it "a nil and nil should return For Calculation only numbers are allowed" do
+            c =  described_class.new(nil,nil) 
+            c.addition.should == "For Calculation only numbers are allowed"
+        end
+
+        it "a " " and 10 should return For Calculation only numbers are allowed" do
+            c =  described_class.new(" ",nil) 
+            c.addition.should == "For Calculation only numbers are allowed"
+        end
+
+        it "a " " and " " should return For Calculation only numbers are allowed" do
+            c =  described_class.new(" "," ") 
+            c.addition.should == "For Calculation only numbers are allowed"
+        end
+        
+        it "a 10 and " " should return For Calculation only numbers are allowed" do
+            c =  described_class.new(10," ") 
+            c.addition.should == "For Calculation only numbers are allowed"
+        end
+
+
         it "121.0 and 10.0 should return 131" do
             c =  described_class.new(121.0,10.0) 
             c.addition.should == 131
@@ -77,6 +108,21 @@ RSpec.describe Calculator do
             c =  described_class.new(nil,nil) 
             c.multiplication.should == "For Calculation only numbers are allowed"
         end
+
+        it "a " " and 10 should return For Calculation only numbers are allowed" do
+            c =  described_class.new(" ",nil) 
+            c.multiplication.should == "For Calculation only numbers are allowed"
+        end
+
+        it "a " " and " " should return For Calculation only numbers are allowed" do
+            c =  described_class.new(" "," ") 
+            c.multiplication.should == "For Calculation only numbers are allowed"
+        end
+        
+        it "a 10 and " " should return For Calculation only numbers are allowed" do
+            c =  described_class.new(10," ") 
+            c.multiplication.should == "For Calculation only numbers are allowed"
+        end
         
         it "121 and 10 should return 1210" do
             c =  described_class.new(121,10) 
@@ -114,6 +160,21 @@ RSpec.describe Calculator do
 
         it "a nil and nil should return For Calculation only numbers are allowed" do
             c =  described_class.new(nil,nil) 
+            c.division.should == "For Calculation only numbers are allowed"
+        end
+
+        it "a " " and 10 should return For Calculation only numbers are allowed" do
+            c =  described_class.new(" ",nil) 
+            c.division.should == "For Calculation only numbers are allowed"
+        end
+
+        it "a " " and " " should return For Calculation only numbers are allowed" do
+            c =  described_class.new(" "," ") 
+            c.division.should == "For Calculation only numbers are allowed"
+        end
+        
+        it "a 10 and " " should return For Calculation only numbers are allowed" do
+            c =  described_class.new(10," ") 
             c.division.should == "For Calculation only numbers are allowed"
         end
                 
@@ -158,6 +219,21 @@ RSpec.describe Calculator do
 
         it "a nil and nil should return For Calculation only numbers are allowed" do
             c =  described_class.new(nil,nil) 
+            c.subtraction.should == "For Calculation only numbers are allowed"
+        end
+
+        it "a " " and 10 should return For Calculation only numbers are allowed" do
+            c =  described_class.new(" ",nil) 
+            c.subtraction.should == "For Calculation only numbers are allowed"
+        end
+
+        it "a " " and " " should return For Calculation only numbers are allowed" do
+            c =  described_class.new(" "," ") 
+            c.subtraction.should == "For Calculation only numbers are allowed"
+        end
+        
+        it "a 10 and " " should return For Calculation only numbers are allowed" do
+            c =  described_class.new(10," ") 
             c.subtraction.should == "For Calculation only numbers are allowed"
         end
                 

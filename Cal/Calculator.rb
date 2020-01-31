@@ -5,7 +5,7 @@ class Calculator
 	end
 
 	def check
-		if (@n.is_a?(Integer) or @n.is_a?(Float)) && (@m.is_a?(Integer) or @m.is_a?(Float)) && (not @m.nil? or not @n.nil?)		
+		if (@n.is_a?(Integer) or @n.is_a?(Float)) && (@m.is_a?(Integer) or @m.is_a?(Float)) && (not @m.nil? or not @n.nil?) && (@m != "" or @n != "")		
 			return true	
 		else
 			return false
